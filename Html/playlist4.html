@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Playlist</title>
+    <link rel="icon" type="image/icon-x" href="../Images/icon.png">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="logo-fav">
+            <div class="logo">
+                <img src="../Images/icon.png" alt="logo">
+                <p>Ninja Studio</p>
+            </div>
+            <a href="#">Favourites</a>
+        </div>
+        <section class="search-profile">
+            <div class="search-bar">
+                <i class="fas fa-search" style="font-size: 1.1rem;"></i>
+                <input type="text" name="search" placeholder="search">
+                <i class="fas fa-microphone"></i>
+            </div>
+            <button class="bell-icon">
+                <i class="fas fa-bell">
+                    <span id="notification"></span>
+                </i>
+            </button>
+            <span class="profile">
+                <img src="https://i.pinimg.com/564x/3f/c6/12/3fc6128d9373e6550533f03d8d965a24.jpg">
+            </span>
+        </section>
+    </nav>
+
+    <main class="main-singer">
+        <header>
+            <div id="image-container">
+                <img src="https://i.pinimg.com/564x/4a/a7/5f/4aa75fe08e4b8be248211c9c4b27c8ad.jpg">
+            </div>
+            <div id="content-container">
+                <div>
+                    <h1 class="heading">Shreya Ghoshal</h1>
+                    <p class="followers">2M+ Followers</p>
+                    <p>Indian Singer</p>
+                </div>
+                <div>
+                    <p id="about-singer">Shreya Ghoshal is a Bengali-Indian playback singer,
+                        composer and music producer. She has received four National Film Awards, four Kerala State Film
+                        Awards, two Tamil Nadu State Film Awards, seven Filmfare Awards including six for Best Female
+                        Playback Singer and ten Filmfare Awards South. </p>
+                </div>
+                <div id="follow-singer">
+                    <button>Play All</button>
+                    <a href="">Follow</a>
+                    <p>836M+ Plays</p>
+                </div>
+            </div>
+        </header>
+
+        <div id="songs">
+            <div class="queue-card">
+                <p>01</p>
+                <img src="https://i.pinimg.com/564x/8e/88/96/8e8896634d38437d9e142849a1fd119f.jpg"
+                    class="queue-card-img">
+                <div class="queue-card-description">
+                    <h3>Khairiyat</h3>
+                    <p>Chhichhore</p>
+                </div>
+                <i class="far fa-heart like"></i>
+                <i class="fas fa-plus add"></i>
+            </div>
+            <div class="queue-card">
+                <p>02</p>
+                <img src="https://i.pinimg.com/564x/bb/a5/9e/bba59e5d78981ae22c14ba9b0c6c11e9.jpg"
+                    class="queue-card-img">
+                <div class="queue-card-description">
+                    <h3>Tu Hi Yaar Mera</h3>
+                    <p>Pati Patni Aur Woh</p>
+                </div>
+                <i class="far fa-heart like"></i>
+                <i class="fas fa-plus add"></i>
+            </div>
+            <div class="queue-card">
+                <p>03</p>
+                <img src="https://i.pinimg.com/564x/86/4b/80/864b807c3127aa2a944c568bdbc38c9c.jpg"
+                    class="queue-card-img">
+                <div class="queue-card-description">
+                    <h3>Ghungroo</h3>
+                    <p>War</p>
+                </div>
+                <i class="far fa-heart like"></i>
+                <i class="fas fa-plus add"></i>
+            </div>
+            <div class="queue-card">
+                <p>04</p>
+                <img src="https://i.pinimg.com/564x/ac/f6/df/acf6df1da679671fd81d802c8634e1fa.jpg"
+                    class="queue-card-img">
+                <div class="queue-card-description">
+                    <h3>Zaalima</h3>
+                    <p>Raees</p>
+                </div>
+                <i class="far fa-heart like"></i>
+                <i class="fas fa-plus add"></i>
+            </div>
+            <div class="queue-card">
+                <p>05</p>
+                <img src="https://i.pinimg.com/564x/7e/b4/8c/7eb48cba0cc1977532aa68659bdf428a.jpg"
+                    class="queue-card-img">
+                <div class="queue-card-description">
+                    <h3>Nashe Si Chad Gayi</h3>
+                    <p>Befikre</p>
+                </div>
+                <i class="far fa-heart like"></i>
+                <i class="fas fa-plus add"></i>
+            </div>
+        </div>
+    </main>
+
+    <aside class="aside-singer" id="slide-up">
+        <div id="sim-art">
+            <div class="title">
+                <h1 class="heading">Similiar Artists</h1>
+                <p>view all</p>
+            </div>
+            <div class="new-songs">
+                <div class="new-songs-img">
+                    <img src="https://i.pinimg.com/564x/6f/5f/a9/6f5fa9bea2afad3ee3a899f338a3cbdb.jpg">
+                </div>
+                <div class="new-songs-description">
+                    <h3>Teri Mitti</h3>
+                    <p>B Praak</p>
+                </div>
+                <div class="new-songs-time-opt">
+                    <p id = "menu-link1"> <i class="fas fa-ellipsis-h"></i> </p>
+                    <p>3:22</p>
+                    <div class="menu close" id="latest-menu1">
+                        <ul>
+                            <li id="bold" class="play-icon"> <a href=""> Play Now</a> </li>
+                            <li id="bold" class="add-icon"> <a href=""> Add To Queue </a> </li>
+                            <li id="bold" class="add-fav-icon"> <a href=""> Add To Favourites </a> </li>
+                            <li class="info-icon"> <a href=""> Get Info </a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="new-songs" style="margin: 5px 0px 15px;">
+                <div class="new-songs-img">
+                    <img src="https://i.pinimg.com/564x/6f/5f/a9/6f5fa9bea2afad3ee3a899f338a3cbdb.jpg">
+                </div>
+                <div class="new-songs-description">
+                    <h3>Teri Mitti</h3>
+                    <p>B Praak</p>
+                </div>
+                <div class="new-songs-time-opt">
+                    <p id = "menu-link2"> <i class="fas fa-ellipsis-h"></i> </p>
+                    <p>3:22</p>
+                    <div class="menu close" id="latest-menu2">
+                        <ul>
+                            <li id="bold" class="play-icon"> <a href=""> Play Now</a> </li>
+                            <li id="bold" class="add-icon"> <a href=""> Add To Queue </a> </li>
+                            <li id="bold" class="add-fav-icon"> <a href=""> Add To Favourites </a> </li>
+                            <li class="info-icon"> <a href=""> Get Info </a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="recent">
+            <div class="title">
+                <h1 class="heading">Recently Played</h1>
+                <p>view all</p>
+            </div>
+            <div class="queue-card">
+                <p>01</p>
+                <img src="https://i.pinimg.com/564x/45/ff/b2/45ffb26986b82ce81c72f2046548456c.jpg" class="queue-card-img">
+                <div class="queue-card-description">
+                    <h3>Eastside</h3>
+                    <p>Benny Blanco, Halsey, Khalid</p>
+                </div>
+                <i class="far fa-heart like"></i>
+            </div>
+            <div class="queue-card">
+                <p>02</p>
+                <img src="https://i.pinimg.com/564x/45/ff/b2/45ffb26986b82ce81c72f2046548456c.jpg" class="queue-card-img">
+                <div class="queue-card-description">
+                    <h3>Eastside</h3>
+                    <p>Benny Blanco, Halsey, Khalid</p>
+                </div>
+                <i class="far fa-heart like"></i>
+            </div>
+            <div class="queue-card">
+                <p>03</p>
+                <img src="https://i.pinimg.com/564x/45/ff/b2/45ffb26986b82ce81c72f2046548456c.jpg" class="queue-card-img">
+                <div class="queue-card-description">
+                    <h3>Eastside</h3>
+                    <p>Benny Blanco, Halsey, Khalid</p>
+                </div>
+                <i class="far fa-heart like"></i>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <a href="#">
+            <i class="fas fa-heart"></i>
+        </a>
+        <a href="#">
+            <i class="fas fa-search"></i>
+        </a>
+        <button class="bell-icon">
+            <i class="fas fa-bell" style="font-size: 1.5rem;">
+                <span id="notification"></span>
+            </i>
+        </button>
+        <a href="#slide-up"><i class="fas fa-bars"></i></a>
+    </footer>
+
+    <script type = "text/javascript" src = "../Javascript/jquery.js"></script>
+    <script type = "text/javascript" src = "../Javascript/script.js"></script>
+
+</body>
+
+</html>

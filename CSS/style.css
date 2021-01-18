@@ -1,0 +1,919 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --bgColor : rgb(29, 9, 83);
+    --cardColor :rgb(1, 1, 44);
+}
+
+
+html {
+    background-color: var(--bgColor);
+}
+
+.heading {
+    color : white;
+    font-size: 1.7rem;
+    font-family: sans-serif;
+}
+
+main section {
+    margin-bottom: 50px;
+}
+
+.carousel {
+    overflow : auto;
+}
+
+.carousel div {
+    flex-shrink: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    height: 10px;
+    background-color: transparent;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: rgb(1, 1, 44);
+}
+
+.carousel::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Navbar */
+
+nav {
+    padding: 1rem;
+    width : 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(29, 9, 83);
+}
+
+/* Navbar - logo and favourite*/
+
+.logo-fav {
+    position: relative;
+    width: 20%;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.logo img{
+    width : 50px;
+    height: 50px;
+}
+
+.logo p {
+    position: absolute;
+    display: inline;
+    color : white;
+    font-family: cursive;
+    word-spacing: 0.2rem;
+}
+
+.logo-fav a {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top : 20%;
+    left: 67%;
+    font-size: 1.3rem;
+}
+
+.logo-fav a:hover {
+    color: lightgray;
+}
+
+/* Navbar - search and profile */
+
+.search-profile {
+    position: absolute;
+    right: 1%;
+    top : 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width : 50%;
+}
+
+.bell-icon{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.bell-icon:hover {
+    cursor: pointer;
+}
+
+.search-bar {
+    border : 2px solid white;
+    height : 35px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+.search-bar input {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height : 100%;
+    text-indent: 14px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+}
+
+.bell-icon i {
+    color: white;
+    font-size: 2rem;
+    position: relative;
+}
+
+#notification {
+    display: inline-block;
+    height : 10px;
+    width : 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 1%;
+    top : 20%;
+}
+
+.profile {
+    display: inline-block;
+    width : 50px;
+    height : 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.profile img {
+    height : 100%;
+    width : 100%;
+    border-radius : 50%;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 0%;
+    padding : 10px 0px;
+    width : 100%;
+    background-color:rgb(37, 12, 104) ;
+    display: none;
+}
+
+footer i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Main */
+
+main {
+    display: inline-block;
+    position: absolute; 
+    left : 2%;
+    top : 120px;
+    width : 70%;
+}
+
+/* Main - Slide */
+
+#slide {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+#slide div {
+    width : 250px;
+    height: 250px;
+    transition: all 0.5s linear;
+}
+
+#slide img {
+    width : 100%;
+    height: 100%;
+}
+
+#slide div:hover {
+    transform : scale(1.1);
+}
+
+/* Main - latest release */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    height: 250px;
+    margin-top: 10px;
+}
+
+.new-songs {
+    width: 350px;
+    height: 90px;
+    position: relative;
+    color: white;
+}
+
+.new-songs-img {
+    width : 30%;
+    display: inline-block;
+    height: 100%;
+}
+
+.new-songs-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.new-songs-description {
+    width : 40%;
+    display: inline-block;
+    position: absolute;
+    top : 30%;
+    padding-left: 3%;
+}
+
+.new-songs-time-opt {
+    position: absolute;
+    right: 5%;
+    top : 30%;
+    width: 20%;
+    display: inline-block;
+    text-align: right;
+}
+
+.new-songs-time-opt .menu li {
+    text-align: left;
+}
+
+.new-songs-time-opt .menu .play-icon::before {
+    content: "";
+    display: inline-block;
+    width : 20px;
+    height: 20px;
+    background-image: url(../Images/play.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0px 7px;
+}
+
+.new-songs-time-opt .menu .add-icon::before {
+    content: "";
+    display: inline-block;
+    width : 20px;
+    height: 20px;
+    background-image: url(../Images/add.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0px 7px;
+}
+
+.new-songs-time-opt .menu .add-fav-icon::before {
+    content: "";
+    display: inline-block;
+    width : 20px;
+    height: 20px;
+    background-image: url(../Images/fav.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0px 7px;
+}
+
+.new-songs-time-opt .menu .info-icon::before {
+    content: "";
+    display: inline-block;
+    width : 20px;
+    height: 20px;
+    background-image: url(../Images/info.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0px 7px;
+}
+
+audio{
+    width : 70%;
+    outline: none;
+    position: fixed;
+    bottom: 0%;
+    z-index: 1;
+    color: black;
+    display: none;
+}
+
+#taaron1:target {
+   display: block;
+}
+
+#taaron2:target {
+    display: block;
+}
+
+#taaron3:target {
+    display: block;
+}
+
+#taaron3:target {
+    display: block;
+}
+
+/* Main - Popular Artists */
+
+.artists-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.artists-container>div {
+    width : 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: rgba(170, 168, 168, 0.377);
+    position: relative;
+    transition: all 0.5s linear;
+}
+
+.artists-container>div>a>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.artists-container>div>a>img:hover {
+    opacity: 0.4;
+}
+
+.open-singer-playlist {
+    position: absolute;
+    top : 35%;
+    left : 35%;
+    height: 40px;
+    width: 40px;
+}
+
+/* Main - stations */
+
+#stations {
+    background-color: rgb(2, 2, 71);
+    padding: 10px 0px;
+    display: flex;
+}
+
+#station-icon {
+    width : 130px;
+    height: 110px;
+    margin-left: 15px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+#station-icon1 {
+    width : 100%;
+    background-color: gold;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+}
+
+#station-icon2 {
+    width : 80%;
+    height: 90%;
+    background-color: goldenrod;
+    position: absolute;
+    top: 5%;
+    left : 10%;
+}
+
+#station-icon3 {
+    height: 100%;
+    width : 60%;
+    background-color: red;
+    position: absolute;
+    left : 20%;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#station-icon3 i {
+    font-size: 3rem;
+    margin-top: 17px;
+}
+.stations-container {
+    display: flex;
+    flex-shrink: 0px;
+}
+
+.station {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    /* display: inline-block; */
+    margin: 0px 10px;
+    background-color: blue;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.station img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.station p {
+    position: absolute;
+    top : 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Playlist */
+
+.song-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#playlist div {
+    width : 32%;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+    min-width : 200px;
+}
+
+#playlist div img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    transition: all 0.5s linear;
+}
+
+#playlist img:hover {
+    transform: scale(1.5);
+}
+
+#playlist div p {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    top:40%;
+    text-shadow: 2px 2px 2px black;
+    font-family: sans-serif;
+}
+
+/* latest-english */
+
+.lang-song {
+    height: 200px;
+    margin-top: 10px;
+    width : 16%;
+    color : white;
+    min-width: 130px;
+    margin-right: 5px;
+    
+}
+
+.lang-song div {
+    height: 70%;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.lang-song div img {
+    width: 100%;
+    height: 100%;
+}
+
+.lang-song h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.lang-song p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Aside */
+
+aside {
+    display: inline-block;
+    position: fixed;
+    right : 2%;
+    top : 120px;
+    width : 25%;
+}
+
+/* Aside - title */
+
+.title {
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.title .heading {
+    display : inline-block;
+    position: absolute;
+    top : 1%;
+    left : 1%;
+}
+
+.title>p {
+    position: absolute;
+    top : 1%;
+    right : 1%;
+    display: inline;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* Aside - Menu */
+
+.menu {
+    width : 200px;
+    background-color: rgb(187, 181, 181);
+    position: absolute;
+    top : 55%;
+    right : 10%;
+    z-index: 1;
+    box-shadow: 2px 2px 2px 0px gray;
+}
+
+#bold {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.menu li {
+    list-style: none;
+    padding: 8px 0px;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+.menu li a {
+    color : black;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#queue-menu:target{
+    display: block;
+}
+
+.close {
+    display: none;
+}
+
+
+/* Aside - queue cards */
+
+.queue-card-container {
+    height : 68vh; 
+    overflow: auto;
+}
+
+.queue-card-container::-webkit-scrollbar {
+    width : 10px;
+}
+
+.queue-card-container::-webkit-scrollbar-thumb {
+    background: darkgray;
+    border-radius: 50px;
+}
+
+
+.queue-card {
+    width : 100%;
+    height: 60px;
+    color : white;
+    position: relative;
+    margin-bottom : 10px;
+}
+
+.queue-card>p {
+    position: absolute;
+    top : 33%;
+    left : 1%;
+}
+
+.queue-card-description {
+    width : 60%;
+    position: absolute;
+    left : 28%;
+    top : 15%;
+}
+
+.queue-card-description h3 {
+    font-size : 1.2rem;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+}
+
+.queue-card-img {
+    position: absolute;
+    top : 4%;
+    left : 8%;
+    height : 53px;
+    width : 55px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 2px rgb(104, 103, 103);
+}
+
+.queue-card .like {
+    position: absolute;
+    top : 33%;
+    right: 1%;
+}
+
+/* Header */
+
+.main-singer {
+    padding-right: 30px;
+}
+
+header {
+    background-color: var(--cardColor);
+    box-shadow: 1px 3px 10px rgb(11, 11, 99);
+    margin-bottom: 40px;
+    display : flex;
+    justify-content: space-between;
+    height: 300px;
+}
+
+#image-container {
+    width : 35%;
+}
+
+#image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+#content-container {
+    width : 60%;
+    padding-top: 30px;
+}
+
+
+#content-container div {
+    position: relative;
+    color: white;
+}
+
+.followers {
+    position: absolute;
+    right: 8%;
+    top : 15%;
+}
+
+#about-singer {
+    font-size: 1.2rem;
+    padding : 15px 6px 30px 0px;
+}
+
+#follow-singer button{
+    width : 130px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right, blue,pink);
+    font-size: 1rem;
+    border: none;
+    outline : none;
+    margin-bottom: 7px;
+}
+
+#follow-singer button:hover {
+    background: linear-gradient(to left, blue,pink);
+}
+
+#follow-singer a {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left : 30%;
+    top : 9%;
+}
+
+#sim-art .new-songs {
+    width: 100%;
+}
+
+/* Songs */
+
+
+#songs .queue-card {
+    border-radius: 5px;
+    background-color: var(--cardColor);
+}
+
+#songs .queue-card>p {
+    left : 2%;
+}
+
+#songs .queue-card img {
+    left : 5%;
+    box-shadow: none;
+    top : 6%;
+}
+
+#songs .queue-card-description {
+    left : 13%;
+}
+
+.add {
+    position : absolute;
+    right: 4%;
+    top : 30%;
+}
+
+#songs .like {
+    right: 8%;
+}
+
+
+
+
+
+/* Media Query */
+
+@media screen and (max-width : 1177px) {
+    #homepage .container {
+        height: 400px;
+    }
+
+    #toggle{
+        height: 50px;
+        width : 55px;
+    }
+
+    #toggle .title .heading::before {
+        content: "";
+        background-image: url(../Images/hamburger.png);
+        display: inline-block;
+        background-position: right;
+        width :40px;
+        height: 40px;
+    }
+
+    #toggle .heading {
+        font-size: 1.2rem;
+        border: 1px solid white;
+    }
+
+    #toggle .title a{
+        display : none;
+    }
+    #toggle .queue-card-container{
+        border-radius: 10px;
+        height: 0px;
+        position: absolute;
+        right : 2%;
+        top : 70px;
+        width : 400px;
+        background-color: var(--cardColor);
+        transition: all 1s linear;
+    }
+    #toggle .title:hover + .queue-card-container{
+        display: inline-block;
+        box-shadow: 2px 2px 5px 3px rgb(29, 73, 104);
+        height: 68vh;
+    } 
+
+    #slide div {
+        width : 200px;
+        height: 200px;
+    }
+
+}
+
+
+/* Media Query - Aside*/ 
+
+@media screen and (max-width : 1146px) {
+    html {
+        font-size : 15px;
+    }
+
+    main {
+        left : 0.5%;
+    }
+
+    aside {
+        right : 0.5%;
+    }
+
+    .main-singer {
+        width : 60%;
+        padding-right: 10px;
+    }
+
+    .aside-singer {
+        width : 35%;
+    }
+
+    #follow-singer a {
+        left : 45%;
+    }
+
+    #songs .queue-card-description {
+        left : 20%;
+    }
+
+} 
+
+
+/* Navbar - media query */
+
+@media screen and (max-width : 926px) {
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo-fav a {
+        display: none;
+    }
+
+    nav .search-bar {
+        display: none;
+    }
+
+    nav .bell-icon {
+        display: none;
+    }
+
+    .profile {
+        position: relative;
+        left : 30%;
+    }
+
+    .main-singer {
+        width : 95%;
+    }
+
+    .aside-singer {
+        display: none;
+    }
+
+    #slide-up:target {
+        display: inline-block;
+        background-color: black;
+        padding : 5px;
+        box-shadow: 0px 0px 2px 3px white;
+    }
+
+    #slide>div {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+@media screen and (max-width : 635px) {
+    #slide>div {
+        width: 100px;
+        height: 100px;
+    }
+}
+
